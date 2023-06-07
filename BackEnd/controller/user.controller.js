@@ -14,7 +14,7 @@ const createUser = asyncHandler(async (req, res) => {
     const newUser = await userModel.create(req.body);
     res.send("User Created Successfully " + newUser.email);
   } else {
-    throw new Error("User Already Exists");
+    res.send("User already Exist");
   }
 });
 
@@ -28,7 +28,7 @@ const loginUser = asyncHandler(async (req, res) => {
       token: generateToken(findUser?._id),
     });
   } else {
-    throw new Error("Invalid Credentials");
+    res.send("Invalid Credentials");
   }
 });
 

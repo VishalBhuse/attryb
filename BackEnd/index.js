@@ -5,6 +5,7 @@ const { connection } = require("./config/db");
 const port = 8000 || process.env.PORT;
 var cors = require("cors");
 const userRouter = require("./routes/user.routes");
+const inventoryRouter = require("./routes/inventory.routes");
 
 app.use(cors());
 app.use(express.json());
@@ -14,6 +15,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/user", userRouter);
+app.use("/inventory", inventoryRouter);
 
 app.listen(port, async () => {
   try {

@@ -147,9 +147,9 @@ const DesktopNav = () => {
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
-            bg={"pink.400"}
+            bg={"blue.600"}
             _hover={{
-              bg: "pink.300",
+              bg: "blue.700",
             }}
           >
             Sign In
@@ -160,9 +160,9 @@ const DesktopNav = () => {
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
-            bg={"pink.400"}
+            bg={"red.500"}
             _hover={{
-              bg: "pink.300",
+              bg: "red.600",
             }}
             onClick={() => {
               dispatch({ type: LOGOUT });
@@ -178,9 +178,9 @@ const DesktopNav = () => {
           fontSize={"sm"}
           fontWeight={600}
           color={"white"}
-          bg={"pink.400"}
+          bg={"blue.600"}
           _hover={{
-            bg: "pink.300",
+            bg: "blue.700",
           }}
         >
           Sign Up

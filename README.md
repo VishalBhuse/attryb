@@ -42,6 +42,13 @@
 ### Dealer Cars Page:-
 ![image](https://github.com/VishalBhuse/attryb/assets/101569259/ea40bbad-d905-4792-a5c1-7851368f15b0)
 
+### Dealer Add Car:-
+![image](https://github.com/VishalBhuse/attryb/assets/101569259/476b131d-b3a1-43e8-be41-20e3dbb08289)
+
+### Dealer Cars Edit Model:-
+![image](https://github.com/VishalBhuse/attryb/assets/101569259/a1903a0e-da9a-4f5f-a2df-29760e0aa675)
+
+
 ### SinglePage Details:-
 ![image](https://github.com/VishalBhuse/attryb/assets/101569259/07682a2f-142b-421b-b279-3c710d0b9a14)
 

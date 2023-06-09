@@ -48,7 +48,7 @@ const Login = () => {
       ).then((res) => {
         if (res === LOGIN_SUCCESS) {
           setIsLoading(true);
-          navigate("/", { replace: true });
+          navigate("/inventoryall", { replace: true });
         } else if (res !== LOGIN_SUCCESS) {
           toast({
             description: "Please enter your correct email and pasword.",

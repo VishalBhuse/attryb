@@ -21,7 +21,6 @@ import { LOGOUT } from "../Redux/actiontypes/auth.types";
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
-  const auth = JSON.parse(localStorage.getItem("auth"));
 
   return (
     <>
@@ -119,24 +118,24 @@ const DesktopNav = () => {
         alignItems="center"
         justifyContent="space-between"
       >
-        <Link to={"/about"}>
-          <Text
-            _hover={{
-              transform: "scale(1.2)",
-              borderBottom: "1px solid #242f65",
-            }}
-          >
-            About Us
-          </Text>
-        </Link>
-        <Link to={"/faq"}>
+        <Link to={"/inventoryall"}>
           <Text
             _hover={{
               transform: "scale(1.2)",
               borderBottom: "1px solid #F2CD5C",
             }}
           >
-            FAQ's
+            Showroom
+          </Text>
+        </Link>
+        <Link to={"/addcar"}>
+          <Text
+            _hover={{
+              transform: "scale(1.2)",
+              borderBottom: "1px solid #F2CD5C",
+            }}
+          >
+            Add Car
           </Text>
         </Link>
       </HStack>
@@ -196,8 +195,8 @@ const MobileNav = () => {
     <Stack p={4} display={{ md: "none" }}>
       <Box>
         <VStack fontWeight={"600"}>
-          <Link to={"/about"}>About Us</Link>
-          <Link to={"/faq"}>FAQ's</Link>
+          <Link to={"/inventoryall"}>Showroom</Link>
+          <Link to={"/addcar"}>Add Cars's</Link>
         </VStack>
       </Box>
     </Stack>

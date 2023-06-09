@@ -44,16 +44,16 @@ const SingleInventory = () => {
           p="5"
         >
           <Image
-            rounded={"md"}
+            rounded={"2xl"}
             alt={"product image"}
             src={singleInventory.img}
             align={"center"}
-            w={"90%"}
+            w={"100%"}
             mx="auto"
-            h={{ base: "100%", sm: "400px", lg: "500px" }}
+            h="100%"
           />
         </Box>
-        <Stack spacing={{ base: 6, md: 10 }}>
+        <Stack spacing={{ base: 6, md: 10 }} shadow={"xl"} p="5">
           <Box as={"header"}>
             <Heading
               color="#2F0F5D"
@@ -67,6 +67,7 @@ const SingleInventory = () => {
               color="blue.600"
               fontSize={{ base: "1xl", sm: "2xl", lg: "2xl" }}
               fontWeight={"500"}
+              textTransform="uppercase"
             >
               {singleInventory.description}
             </Text>
@@ -118,6 +119,7 @@ const SingleInventory = () => {
                     bg={singleInventory.color}
                     h="15px"
                     w="15px"
+                    border={'1px solid black'}
                   ></Text>
                 </HStack>
                 <HStack justifyContent={"space-between"}>

@@ -147,6 +147,7 @@ const AllInventory = () => {
                         bg={item.color}
                         h="15px"
                         w="15px"
+                        border="1px solid #000"
                         borderRadius={"50%"}
                       ></Text>
                     </VStack>
@@ -175,7 +176,7 @@ const AllInventory = () => {
                         lineHeight={"15px"}
                         color="#000000"
                       >
-                        {item.mileage}
+                        {item.mileage} MPG
                       </Text>
                     </HStack>
                     <HStack>

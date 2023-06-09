@@ -8,6 +8,9 @@ import {
   FormControl,
   FormLabel,
   useToast,
+  RadioGroup,
+  Radio,
+  Stack,
 } from "@chakra-ui/react";
 import { Link, useNavigate } from "react-router-dom";
 import { PostAPICALL } from "../Config/Functions/getFun";
@@ -17,17 +20,28 @@ const Signup = () => {
     name: "",
     email: "",
     password: "",
+    role: "",
   });
   const toast = useToast();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    let { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+    let { name, value, type } = e.target;
+    if (type === "radio") {
+      setForm({ ...form, [name]: value });
+    } else {
+      setForm({ ...form, [name]: value });
+    }
   };
 
   const handelSubmit = async () => {
-    if (form.name !== "" && form.email !== "" && form.password !== "") {
+    console.log(form);
+    if (
+      form.name !== "" &&
+      form.email !== "" &&
+      form.password !== "" &&
+      form.role !== ""
+    ) {
       await PostAPICALL(`user/register`, form)
         .then((r) => {
           if (r === "User already Exist") {
@@ -139,6 +153,29 @@ const Signup = () => {
             autoComplete="off"
           />
         </FormControl>
+        <FormControl mt="20px" isRequired color="black">
+          <FormLabel fontSize="12px">Register as</FormLabel>
+          <RadioGroup
+            name="role"
+            fontWeight="bold"
+            bg="blue.300"
+            p="10px"
+            m="auto"
+            onChange={(value) =>
+              handleChange({ target: { name: "role", value } })
+            }
+            value={form.role}
+          >
+            <Stack spacing={5} direction="row">
+              <Radio colorScheme="red" value="dealer">
+                Dealer
+              </Radio>
+              <Radio colorScheme="green" value="user">
+                User
+              </Radio>
+            </Stack>
+          </RadioGroup>
+        </FormControl>
         <Input
           w="full"
           onClick={handelSubmit}
@@ -148,6 +185,7 @@ const Signup = () => {
           color="white"
           mt="20px"
           type="submit"
+          cursor={"pointer"}
         />
 
         <Box mt="10px">

@@ -13,7 +13,7 @@ import {
 export const inventoryADD = (payload) => (dispatch) => {
   PostAPICALL(`inventory`, payload)
     .then((r) => {
-      dispatch(GetinventorySearch());
+      dispatch(GetinventoryApi());
       return r;
     })
     .catch((err) => {
@@ -21,10 +21,21 @@ export const inventoryADD = (payload) => (dispatch) => {
     });
 };
 
+export const GetinventoryApi = () => (dispatch) => {
+  dispatch({ type: GET_INVENTORY_LOADING });
+  GetAPICALL(`inventory`)
+    .then((r) => {
+      dispatch({ type: GET_INVENTORY_SUCCESS, payload: r });
+    })
+    .catch((err) => {
+      dispatch({ type: GET_INVENTORY_ERROR });
+    });
+};
+
 export const GetSingleinventoryApi = (id) => (dispatch) => {
   GetAPICALL(`inventory/${id}`)
     .then((r) => {
-      dispatch(GetinventorySearch());
+      dispatch(GetinventoryApi());
     })
     .catch((err) => {
       console.log(err);
@@ -34,7 +45,7 @@ export const GetSingleinventoryApi = (id) => (dispatch) => {
 export const DelteinventoryApi = (id) => (dispatch) => {
   DeleteAPICALL(`inventory/${id}`)
     .then((r) => {
-      dispatch(GetinventorySearch());
+      dispatch(GetinventoryApi());
     })
     .catch((err) => {
       console.log(err);
@@ -55,7 +66,7 @@ export const GetinventorySearch = (location) => (dispatch) => {
 export const inventoryEditAPI = (id, payload) => (dispatch) => {
   PatchAPICALL(`inventory/${id}`, payload)
     .then((r) => {
-      dispatch(GetinventorySearch());
+      dispatch(GetinventoryApi());
     })
     .catch((err) => {
       console.log(err);

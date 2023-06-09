@@ -71,10 +71,28 @@ const getInventroysearch = asyncHandler(async (req, res) => {
   }
 });
 
+const inventoryEdit = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const updates = req.body;
+  const options = { new: true, runValidators: true };
+  const updatedinventory = await inventoryModel.findByIdAndUpdate(
+    id,
+    updates,
+    options
+  );
+
+  if (!updatedinventory) {
+    res.status(404).send("inventory not found");
+  } else {
+    res.send("inventory updated successfully");
+  }
+});
+
 module.exports = {
   allinventory,
   createInventory,
   deleteInventory,
   getInventoryByid,
   getInventroysearch,
+  inventoryEdit,
 };

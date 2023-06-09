@@ -22,6 +22,11 @@
 - User only see the deals and filtering 
 - User has not access to delete , edit or add any deals 
 
+## Functionality :
+- Filter by Car Colors
+- Filter by Mileage
+- Filter by Price
+
 
 
 ### SignUp Page:-

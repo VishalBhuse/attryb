@@ -30,13 +30,13 @@
 ### Login Page:-
 ![image](https://github.com/VishalBhuse/attryb/assets/101569259/0fbda94f-66f1-46dd-9c06-3199509411ed)
 
-### UserCars Page:-
+### User Cars Page:-
 ![image](https://github.com/VishalBhuse/attryb/assets/101569259/63a43474-abc5-4bf3-abb4-afcdb4e61307)
 
 ### Dealer Cars Page:-
 ![image](https://github.com/VishalBhuse/attryb/assets/101569259/ea40bbad-d905-4792-a5c1-7851368f15b0)
 
-### SinglePage Car Details:-
+### SinglePage Details:-
 ![image](https://github.com/VishalBhuse/attryb/assets/101569259/07682a2f-142b-421b-b279-3c710d0b9a14)
 
 

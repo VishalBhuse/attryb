@@ -6,7 +6,7 @@ const allinventory = asyncHandler(async (req, res) => {
   res.send(findinventory);
 });
 
-const getInventoryByid = async (req, res) => {
+const getInventoryByid = asyncHandler(async (req, res) => {
   try {
     const { id } = req.params;
     const inventoryItem = await inventoryModel.findById(id);
@@ -19,18 +19,18 @@ const getInventoryByid = async (req, res) => {
   } catch (error) {
     res.status(500).send("Something went wrong " + error);
   }
-};
+});
 
-const createInventory = async (req, res) => {
+const createInventory = asyncHandler(async (req, res) => {
   try {
     const newInventory = await inventoryModel.create(req.body);
     res.send("Inventory created successfully: " + newInventory._id);
   } catch (error) {
     res.status(500).send("Something went wrong: " + error);
   }
-};
+});
 
-const deleteInventory = async (req, res) => {
+const deleteInventory = asyncHandler(async (req, res) => {
   try {
     const { id } = req.params;
     const deletedInventory = await inventoryModel.findByIdAndDelete(id);
@@ -43,11 +43,38 @@ const deleteInventory = async (req, res) => {
   } catch (error) {
     res.status(500).send("Something went wrong: " + error);
   }
-};
+});
+
+const getInventroysearch = asyncHandler(async (req, res) => {
+  let query = req.query;
+
+  let sortOption = {};
+
+  if (query.price) {
+    if (query.price === "highToLow") {
+      query.price = { $gte: 0 };
+      sortOption = { price: -1 };
+    } else if (query.price === "lowToHigh") {
+      query.price = { $gte: 0 };
+      sortOption = { price: 1 };
+    }
+  }
+  if (query.mileage) {
+    query.mileage = { $gte: 0, $lte: Number(query.mileage) };
+  }
+
+  try {
+    let data = await inventoryModel.find(query).sort(sortOption);
+    res.send(data);
+  } catch (err) {
+    res.send({ err: err });
+  }
+});
 
 module.exports = {
   allinventory,
   createInventory,
   deleteInventory,
   getInventoryByid,
+  getInventroysearch,
 };

@@ -19,9 +19,9 @@
 - Dealer and user can Signup & Login
 - Dealer add their deeals
 - Dealers can Update & Delete Previous Deals
-- User only see the deals and filteing 
-- User has not access to delete , edit or add deals 
-- View of deals & Filter deals
+- User only see the deals and filtering 
+- User has not access to delete , edit or add any deals 
+
 
 
 ### SignUp Page:-

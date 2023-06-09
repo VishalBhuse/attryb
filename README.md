@@ -28,6 +28,8 @@
 - Filter by Price
 
 
+### Home Page:- 
+![image](https://github.com/VishalBhuse/attryb/assets/101569259/45e7bc79-0238-4d2b-a763-5f24bc1b06ed)
 
 ### SignUp Page:-
 ![image](https://github.com/VishalBhuse/attryb/assets/101569259/9d749f4b-fd67-4bb6-ae52-c9863e3dcea5)

@@ -7,7 +7,6 @@
 - React JS,
 - Redux, Redux Thunk
 - Chakra UI,
-- Heroku APi
 - NodeJs 
 - Express Js
 - MongoDB 

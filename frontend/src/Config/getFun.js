@@ -1,5 +1,4 @@
 import axios from "axios";
-// import { MainBackedAPI } from "../API";
 
 const BASE_URL = "https://attryb-one.vercel.app";
 

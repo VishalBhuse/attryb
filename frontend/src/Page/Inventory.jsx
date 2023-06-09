@@ -10,7 +10,7 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { GetinventorySearch } from "../Redux/action/inventory.action";
-import { PostAPICALL } from "../Config/Functions/getFun";
+import { PostAPICALL } from "../Config/getFun";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 

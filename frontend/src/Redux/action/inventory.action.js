@@ -3,7 +3,7 @@ import {
   GetAPICALL,
   PatchAPICALL,
   PostAPICALL,
-} from "../../Config/Functions/getFun";
+} from "../../Config/getFun";
 import {
   GET_INVENTORY_ERROR,
   GET_INVENTORY_LOADING,

@@ -1,4 +1,4 @@
-import { PostAPICALL } from "../../Config/Functions/getFun";
+import { PostAPICALL } from "../../Config/getFun";
 import {
   LOGIN_FAILURE,
   LOGIN_REQUEST,

@@ -13,7 +13,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { Link, useNavigate } from "react-router-dom";
-import { PostAPICALL } from "../Config/Functions/getFun";
+import { PostAPICALL } from "../Config/getFun";
 
 const Signup = () => {
   const [form, setForm] = useState({

@@ -43,6 +43,7 @@ const AllInventory = () => {
   ];
 
   const handledelete = (item) => {
+    console.log(item.user , auth._id)
     if (item.user == auth._id) {
       dispatch(DelteinventoryApi(item._id));
       toast({
@@ -95,7 +96,7 @@ const AllInventory = () => {
                   />
                   <VStack mt="6" spacing="3">
                     <Heading size="md">{item.title}</Heading>
-                    <Text>{item.description}</Text>
+                    <Text noOfLines={1}>{item.description}</Text>
                     <HStack w="100%" justifyContent={"space-between"}>
                       <VStack gap="10px">
                         <Heading

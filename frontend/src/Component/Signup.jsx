@@ -46,7 +46,7 @@ const Signup = () => {
         .then((r) => {
           if (r === "User already Exist") {
             toast({
-              description: "User already Exist",
+              description: "User Already Exist",
               status: "warning",
               duration: 3000,
               isClosable: true,
@@ -54,7 +54,7 @@ const Signup = () => {
             });
           } else {
             toast({
-              description: "SignUp successfully",
+              description: "SignUp Successfully",
               status: "success",
               duration: 3000,
               isClosable: true,

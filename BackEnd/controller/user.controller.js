@@ -32,4 +32,19 @@ const loginUser = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { createUser, allUserInfo, loginUser };
+const deleteUser = asyncHandler(async (req, res) => {
+  const userId = req.params.id;
+  try {
+    const deletedUser = await userModel.findByIdAndDelete(userId);
+
+    if (deletedUser) {
+      res.send("User deleted successfully.");
+    } else {
+      res.status(404).send("User not found.");
+    }
+  } catch (error) {
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+module.exports = { createUser, allUserInfo, loginUser, deleteUser };

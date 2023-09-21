@@ -63,13 +63,11 @@ const Inventory = () => {
             isClosable: true,
             position: "top-center",
           });
-          setTimeout(() => {
             navigate("/inventoryall");
-          }, 3000);
         })
         .catch((err) => {
           toast({
-            description: "You need to Login",
+            description: "Add Inventory Properly",
             status: "warning",
             duration: 3000,
             isClosable: true,
@@ -254,7 +252,7 @@ const Inventory = () => {
                 placeholder="eg:- 120"
                 fontSize="13px"
                 fontWeight="500"
-                type="text"
+                type="number"
                 value={form.mileage}
                 name="mileage"
                 onChange={(e) => handleChange(e)}
@@ -271,7 +269,7 @@ const Inventory = () => {
                 placeholder="eg:- 120"
                 fontSize="13px"
                 fontWeight="500"
-                type="text"
+                type="number"
                 value={form.max_speed}
                 name="max_speed"
                 onChange={(e) => handleChange(e)}
